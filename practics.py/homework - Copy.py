@@ -28,3 +28,16 @@
 #         sum_odds += i
 # print(sum_odds)
 
+# Function  factorial
+n = 5
+def factorial(num):
+    if num == 0 or num == 1:
+        return 1
+    result = 1
+    for i in range(2, num + 1):
+        result *= i
+    return result
+
+print(factorial(n))
+
+
