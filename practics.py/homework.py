@@ -140,3 +140,19 @@
 
 # print(my_car.make) 
 # print(my_car.model) 
+
+class Product:
+    def __init__(self, id):
+        self.id = id
+        
+    def product_details(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+        
+    def display_product(self):
+        print(f"ID: {self.id}, Name: {self.name}, Price: {self.price}, Quantity: {self.quantity}")
+
+p = Product(id=1)
+p.product_details(name="laptop", price=100000, quantity=2)
+p.display_product()
