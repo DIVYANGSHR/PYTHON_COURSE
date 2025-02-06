@@ -58,7 +58,7 @@ print("Thank you for your order. Please wait 10-15 minutes.")
 
 # Menu management
 while True:
-    action = input("Would you like to add, update, or delete an item from the menu? (Add/Update/Delete/Exit) ").lower()
+    action = input("Would you like to add, update, or delete an item from the menu? (Add/Update/Delete/Show/Exit) ").lower()
     if action == 'add':
         item = input("Enter the name of the item to add: ")
         price = int(input("Enter the price of the item: "))
@@ -70,6 +70,10 @@ while True:
     elif action == 'delete':
         item = input("Enter the name of the item to delete: ")
         delete_item(menu, item)
+    elif action=="show":
+        for items, price in menu.items():
+            print(f"Item: {items}, Price: {price}")
+
     elif action == 'exit':
         break
     else:
